@@ -24,9 +24,9 @@
 
 #if defined(ESP_ARDUINO_VERSION_MAJOR) && (ESP_ARDUINO_VERSION_MAJOR < 3)
   #warning "arduino-esp32 core < 3.0.0 : NAPT 不可用, 共享上网功能将失效, 请升级 core"
-  #define WENDU_HAVE_NAPT 0
+  #define ESP32S3_HAVE_NAPT 0
 #else
-  #define WENDU_HAVE_NAPT 1
+  #define ESP32S3_HAVE_NAPT 1
 #endif
 
 /* ============ 用户配置（全部需自行填写） ============
@@ -316,7 +316,7 @@ void napt(){
   esp_netif_t *ap = esp_netif_get_handle_from_ifkey("WIFI_AP_DEF");
   if(!ap){ Serial.println("[NAPT] no ap netif"); return; }
 
-#if WENDU_HAVE_NAPT
+#if ESP32S3_HAVE_NAPT
   /* core >= 3.0.0 : 官方 API, 原型在 esp_netif.h */
   esp_err_t err = esp_netif_napt_enable(ap);
   if(err==ESP_OK){

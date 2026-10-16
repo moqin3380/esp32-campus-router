@@ -26,7 +26,7 @@
 
 ### 1. 修改配置
 
-打开 `wendu.ino`，按步骤填写顶部的用户配置区（**全部需要自行填写**）：
+打开 `ESP32_S3.ino`，按步骤填写顶部的用户配置区（**全部需要自行填写**）：
 
 ```c
 /* 【步骤 1】学校 2.4G WiFi
@@ -63,7 +63,7 @@
 
 ### 2. 编译烧录
 
-Arduino IDE 直接打开 `wendu.ino`；或用命令行：
+Arduino IDE 直接打开 `ESP32_S3.ino`；或用命令行：
 
 ```powershell
 arduino-cli compile --fqbn esp32:esp32:esp32s3 .
@@ -120,8 +120,8 @@ LVoJPiCN2R8G90yg+hmFHuacZ1OWMnrsSTXkYpUq/3dlbfKwv6xztjI7DeBE45QA
 ## 文件结构
 
 ```
-wendu/                 # Arduino sketch（库结构，目录名需与 .ino 同名）
-├── wendu.ino          # 主程序
+ESP32_S3/              # Arduino sketch（目录名需与 .ino 同名）
+├── ESP32_S3.ino          # 主程序
 ├── README.md
 └── .gitignore
 ```
