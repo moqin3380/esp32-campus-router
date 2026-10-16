@@ -1,0 +1,19 @@
+# Arduino 构建产物
+build/
+.cache/
+*.elf
+*.map
+
+# 编译输出
+*.o
+*.d
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# 串口日志
+serial.log
